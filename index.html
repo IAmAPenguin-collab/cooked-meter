@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Grade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <div class="card">
+      <h1>Grade Calculator</h1>
+
+      <label for="current">Current grade (%)</label>
+      <input type="number" id="current">
+
+      <label for="weight">Final exam weight (%)</label>
+      <input type="number" id="weight">
+
+      <label for="target">Target final grade (%)</label>
+      <input type="number" id="target">
+
+      <button onclick="calculate()">Calculate</button>
+      <button onclick="resetCalculator()" class="reset-btn">Reset</button>
+      <p id="result">Result will show here</p>
+
+      <!-- december 27th rn what about you guys? -->
+      <div class="meter hidden" id="meter">
+        <div id="meter-bar"></div>
+      </div>
+
+      <!-- there once was a moose-->
+      <p id="reaction-text" class="hidden"></p>
+
+      <!-- ts better be hidden) -->
+      <img
+        id="reaction"
+        class="hidden"
+        src=""
+        alt="reaction image"
+      >
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
