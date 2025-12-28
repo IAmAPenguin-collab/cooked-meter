@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <title>Grade Calculator</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grade Calculator</title>
 
-  <body>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAGE WRAPPER (centers the card) -->
+  <main class="page">
     <div class="card">
       <h1>Grade Calculator</h1>
 
       <label for="current">Current grade (%)</label>
-      <input type="number" id="current">
+      <input id="current" type="number" placeholder="e.g. 78" />
 
       <label for="weight">Final exam weight (%)</label>
-      <input type="number" id="weight">
+      <input id="weight" type="number" placeholder="e.g. 30" />
 
       <label for="target">Target final grade (%)</label>
-      <input type="number" id="target">
+      <input id="target" type="number" placeholder="e.g. 85" />
 
       <button onclick="calculate()">Calculate</button>
-      <button onclick="resetCalculator()" class="reset-btn">Reset</button>
+      <button class="reset-btn" onclick="resetCalculator()">Reset</button>
+
       <p id="result">Result will show here</p>
 
-      <!-- december 27th rn what about you guys? -->
-      <div class="meter hidden" id="meter">
+      <!-- REACTION -->
+      <p id="reaction-text" class="hidden"></p>
+      <img id="reaction" class="hidden" />
+
+      <!-- COOKED METER -->
+      <div id="meter" class="meter hidden">
         <div id="meter-bar"></div>
       </div>
-
-      <!-- there once was a moose-->
-      <p id="reaction-text" class="hidden"></p>
-
-      <!-- ts better be hidden) -->
-      <img
-        id="reaction"
-        class="hidden"
-        src=""
-        alt="reaction image"
-      >
     </div>
+  </main>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- FOOTER -->
+  <footer>
+    <div class="kofi">
+      <p>If this saved your GPA, buy me a snack ☕</p>
+      <a href="https://ko-fi.com/iamapenguin" target="_blank">
+        <button class="kofi-btn">Support on Ko-fi</button>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
